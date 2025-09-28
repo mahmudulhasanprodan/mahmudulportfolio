@@ -1,30 +1,52 @@
 
-import { FaCodeBranch } from "react-icons/fa6";
+// import { FaCodeBranch } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
+import { SiSlashdot } from "react-icons/si";
+import { FaBarsStaggered } from "react-icons/fa6";
+import { useState } from "react";
 
 
 const Header = () => {
+const[menuOpem,setmenuOpem] = useState(false);
+
+// HandleMenu Function is start Here
+const HandleMenu = () => {
+    setmenuOpem(!menuOpem)
+};
+
+console.log(menuOpem);
+
   return (
     <>
-      <div className="bg-bgColor">
-        <div className="container px-4">
-          <div className="flex items-center justify-between py-2">
-            <div className="flex items-center">
+      <div className="bg-bgColor fixed w-full md:w-[100%] md:static shadow-md md:shadow-none">
+        <div className="container md:px-4">
+          <div className="flex items-center justify-between py-2 px-4 bg-bgColor">
+            <div className="flex">
               <span className="text-textColorThree text-3xl font-bold">
-                <FaCodeBranch />
+                <SiSlashdot />
               </span>
               <h2 className="font-JosefinSans leading-6 text-2xl font-bold text-textColorTwo">
-                Coder <br /> Mahmudul
+                Mahmudul
               </h2>
             </div>
-            <div>
+            <div className="md:hidden">
+              <span
+                className="font-bold text-xl cursor-pointer"
+                onClick={HandleMenu}
+              >
+                <FaBarsStaggered />
+              </span>
+            </div>
+            <div className="hidden md:block">
               <ul className="flex items-center gap-x-10">
                 <li className="font-JosefinSans text-md cursor-pointer">
                   Home
                 </li>
+
                 <li className="font-JosefinSans text-md cursor-pointer">
                   About
                 </li>
+
                 <li className="font-JosefinSans text-md cursor-pointer">
                   Blog
                 </li>
@@ -33,7 +55,7 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="hidden md:block">
               <button className="font-JosefinSans px-4 py-2 rounded-md font-bold bg-textColorTwo flex  gap-x-2">
                 Contact
                 <span className="font-bold text-xl text-textColorOne">
@@ -42,6 +64,36 @@ const Header = () => {
               </button>
             </div>
           </div>
+
+          {/* Mobile menu bar is here */}
+          {menuOpem && (
+            <div className="md:hidden top-0 fixed w-full h-[100vh] bg-textColorThree right-0 transition-all duration-700">
+              <div>
+                <span
+                  className="font-bold text-xl cursor-pointer flex z-50 px-4 text-textColorOne justify-end pt-3"
+                  onClick={HandleMenu}
+                >
+                  X
+                </span>
+              </div>
+              <div className="pt-10">
+                <ul className="flex flex-col items-center  gap-y-6 -z-20">
+                  <li className="font-JosefinSans text-md cursor-pointer text-textColorOne">
+                    Home
+                  </li>
+                  <li className="font-JosefinSans text-md cursor-pointer">
+                    About
+                  </li>
+                  <li className="font-JosefinSans text-md cursor-pointer">
+                    Blog
+                  </li>
+                  <li className="font-JosefinSans text-md cursor-pointer">
+                    Contact
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
