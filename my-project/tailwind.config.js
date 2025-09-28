@@ -12,13 +12,14 @@ export default {
          Oswald : "var(--Oswald)",
          JosefinSans : "var(--JosefinSans)",
     },
-
     extend: {
        colors: {
-        bgColor: "var(--bgColor)",
         textColorOne: "var(--textColorOne)",
         textColorTwo: "var(--textColorTwo)",
         textColorThree: "var(--textColorThree)",
+      },
+       backgroundImage: {
+        bgColor: "var(--bgColor)",
       },
     },
   },

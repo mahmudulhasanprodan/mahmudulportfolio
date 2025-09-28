@@ -4,7 +4,7 @@
 
 /* common Css File For every component */
 :root{
-    --bgColor : #293745;
+    --bgColor : linear-gradient(90deg, #FAFAFA, #F5EDED, #FAFAFA);
     --textColorOne : #F8FAFB;
     --textColorTwo : #38ACD7;
     --textColorThree : #9DB3BD;
