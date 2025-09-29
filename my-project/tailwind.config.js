@@ -20,6 +20,7 @@ export default {
       },
        backgroundImage: {
         bgColor: "var(--bgColor)",
+        bgColortwo: "var(--bgColortwo)",
       },
     },
   },
