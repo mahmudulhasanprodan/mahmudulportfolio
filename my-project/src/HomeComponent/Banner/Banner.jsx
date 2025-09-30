@@ -6,9 +6,9 @@ import { LuArrowRight } from "react-icons/lu";
 const Banner = () => {
   return (
     <>
-      <div className="bg-bgColor">
+      <div className="bg-mainBg">
         <div className="container">
-          <div className="py-32">
+          <div className="py-32 bg-bgColor shadow-xl">
             <div className="flex flex-col items-center justify-center gap-y-3 -z-10">
               <div>
                 <img
@@ -40,7 +40,7 @@ const Banner = () => {
               </div>
               <div className="flex items-center gap-x-4 pt-4">
                 <button className="px-2 md:px-8 py-2 bg-textColorTwo rounded-md text-textColorOne font-semibold flex items-center gap-x-2">
-                  Comtact me
+                  Contact Whatsapp
                   <span className="font-bold">
                     <LuArrowRight />
                   </span>

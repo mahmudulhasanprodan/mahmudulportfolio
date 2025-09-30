@@ -18,9 +18,9 @@ console.log(menuOpem);
 
   return (
     <>
-      <div className="bg-bgColor fixed w-full md:w-[100%] md:static shadow-md md:shadow-none">
-        <div className="container md:px-4">
-          <div className="flex items-center justify-between py-2 px-4 bg-bgColor">
+      <div className="bg-mainBg fixed w-full md:w-[100%] md:static shadow-md md:shadow-none pt-4 pb-2">
+        <div className="container m-auto">
+          <div className="flex items-center justify-between py-2 bg-bgColor shadow-xl md:px-4 pt-2">
             <div className="flex">
               <span className="text-textColorThree text-3xl font-bold">
                 <SiSlashdot />
@@ -44,7 +44,7 @@ console.log(menuOpem);
                 </li>
 
                 <li className="font-JosefinSans text-md cursor-pointer">
-                  About
+                  <a href="#about">About</a>
                 </li>
 
                 <li className="font-JosefinSans text-md cursor-pointer">
@@ -56,7 +56,7 @@ console.log(menuOpem);
               </ul>
             </div>
             <div className="hidden md:block">
-              <button className="font-JosefinSans px-4 py-2 rounded-md font-bold bg-textColorTwo flex  gap-x-2">
+              <button className="font-JosefinSans px-4 py-2 rounded-md font-bold bg-textColorTwo flex  gap-x-2 text-textColorOne">
                 Contact
                 <span className="font-bold text-xl text-textColorOne">
                   <GoArrowUpRight />

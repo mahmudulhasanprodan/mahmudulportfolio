@@ -5,6 +5,7 @@
 /* common Css File For every component */
 :root{
     --bgColor : linear-gradient(90deg, #FAFAFA, #F5EDED, #FAFAFA);
+    --mainBg : #E2E8F0;
     --bgColortwo : linear-gradient(90deg, #752A9B, #38ACD7);
     --textColorOne : #F8FAFB;
     --textColorTwo : #38ACD7;

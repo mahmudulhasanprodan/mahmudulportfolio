@@ -1,0 +1,50 @@
+import { BlogProduct } from "../../../Utils/Utils";
+
+
+const Blog = () => {
+ 
+ 
+  return (
+    <>
+      <div className="bg-mainBg">
+        <div className="container">
+          <div className="bg-bgColor shadow-xl md:px-4 py-20">
+            <div className="flex item center justify-center py-10 pb-10">
+              <h2 className="font-JosefinSans font-bold text-3xl">Blogs</h2>
+            </div>
+            <div className="flex flex-wrap justify-between gap-y-6 cursor-pointer">
+              {BlogProduct?.map((item) => (
+                <div key={item.id}>
+                  <div className="w-[450px] h-[350px] bg-textColorOne rounded-md shadow-md p-2">
+                    <div>
+                      <picture>
+                        <img
+                          src={item.blogImg}
+                          alt={item.blogImg}
+                          className="w-full h-48"
+                        />
+                      </picture>
+                    </div>
+                    <div className="flex flex-col gap-y-2">
+                      <h3 className="font-JosefinSans font-bold text-sm pt-1">
+                        {item.date === true ? "30-Sep,2025" : ""}
+                      </h3>
+                      <p className="font-JosefinSans text-sm text-justify">
+                        {item.description}
+                      </p>
+                      <button className="px-4 py-2 bg-textColorTwo rounded-md text-textColorOne font-JosefinSans font-bold mt-3">
+                        Read More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Blog

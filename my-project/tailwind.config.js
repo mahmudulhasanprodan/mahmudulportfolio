@@ -1,28 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-   container: {
-      center: true,
+    container: {
+      center : true,
+      screens : {
+        lg: '960px',
+      }
     },
-      fontFamily: {
-         Oswald : "var(--Oswald)",
-         JosefinSans : "var(--JosefinSans)",
+    fontFamily: {
+      Oswald: "var(--Oswald)",
+      JosefinSans: "var(--JosefinSans)",
     },
     extend: {
-       colors: {
+      colors: {
         textColorOne: "var(--textColorOne)",
+        mainBg: "var(--mainBg)",
         textColorTwo: "var(--textColorTwo)",
         textColorThree: "var(--textColorThree)",
       },
-       backgroundImage: {
+      backgroundImage: {
         bgColor: "var(--bgColor)",
         bgColortwo: "var(--bgColortwo)",
       },
     },
+
   },
   plugins: [],
-}
+};
