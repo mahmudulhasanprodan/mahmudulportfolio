@@ -7,6 +7,7 @@ import Blog from "../../HomeComponent/Blog/Blog"
 import Footer from "../../HomeComponent/Footer/Footer"
 
 const Home = () => {
+
   return (
     <>
       <Header />

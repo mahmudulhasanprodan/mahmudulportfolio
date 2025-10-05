@@ -1,8 +1,16 @@
+import { useState } from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 
 const Footer = () => {
+  const[contactModal,setcontactModal] = useState(false);
+
+  // HandleContact function is start here
+  const HandleContact = () => {
+        setcontactModal(!contactModal);
+  };
+
   return (
     <>
       <div className="bg-mainBg">
@@ -10,17 +18,20 @@ const Footer = () => {
           <div className="bg-bgColor shadow-xl pt-32">
             <div className="bg-slate-900 w-full h-80 relative pt-24">
               <div className="flex items-center justify-center">
-                <div className="w-[750px] h-24 bg-textColorTwo absolute -top-12 flex items-center justify-between px-4 shadow-xl">
+                <div className="w-full md:w-[750px] h-24 bg-textColorTwo absolute -top-12 flex items-center justify-between px-4 shadow-xl" id="contact">
                   <div>
-                    <h2 className="font-JosefinSans text-md text-textColorOne font-bold">
+                    <h2 className="font-JosefinSans text-sm md:text-md text-textColorOne font-bold">
                       Ready for a next projects?
                     </h2>
-                    <p className="font-JosefinSans text-sm text-textColorOne">
+                    <p className="font-JosefinSans text-xs md:text-sm text-textColorOne">
                       Let{"'"}s get started!
                     </p>
                   </div>
                   <div>
-                    <button className="px-6 py-2 bg-slate-900 rounded-md text-textColorOne font-JosefinSans font-bold">
+                    <button
+                      className="px-2 md:px-6 py-2 bg-slate-900 rounded-md text-textColorOne font-JosefinSans font-bold"
+                      onClick={HandleContact}
+                    >
                       Contact Me!
                     </button>
                   </div>
@@ -31,13 +42,15 @@ const Footer = () => {
                   <h2 className="font-JosefinSans font-bold text-2xl text-textColorOne text-center">
                     Mahmudul Hasan
                   </h2>
-                   <h3 className="font-JosefinSans font-bold text-md text-textColorThree text-center">Gazipur,Dhaka</h3>
+                  <h3 className="font-JosefinSans font-bold text-md text-textColorThree text-center">
+                    Gazipur,Dhaka
+                  </h3>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-y-3">
                   <h2 className="font-JosefinSans font-bold text-xl text-textColorTwo">
                     Get In Touch
                   </h2>
-                  <div className="flex items-center gap-x-3"> 
+                  <div className="flex items-center gap-x-3">
                     <span className="font-bold text-xl text-textColorOne cursor-pointer">
                       <FaFacebookSquare />
                     </span>
@@ -58,6 +71,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        {/* Contact madal is here */}
+       
       </div>
     </>
   );

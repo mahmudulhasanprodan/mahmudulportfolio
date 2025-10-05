@@ -1,29 +1,31 @@
 
 // import { FaCodeBranch } from "react-icons/fa6";
-import { GoArrowUpRight } from "react-icons/go";
-import { SiSlashdot } from "react-icons/si";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { useState } from "react";
+import{ useState } from "react";
+import { SiLintcode } from "react-icons/si";
+import { ImBrightnessContrast } from "react-icons/im";
+
 
 
 const Header = () => {
+
 const[menuOpem,setmenuOpem] = useState(false);
+
 
 // HandleMenu Function is start Here
 const HandleMenu = () => {
     setmenuOpem(!menuOpem)
 };
 
-console.log(menuOpem);
 
   return (
     <>
-      <div className="bg-mainBg fixed w-full md:w-[100%] md:static shadow-md md:shadow-none pt-4 pb-2">
+      <div className="bg-mainBg">
         <div className="container m-auto">
-          <div className="flex items-center justify-between py-2 bg-bgColor shadow-xl md:px-4 pt-2">
-            <div className="flex">
-              <span className="text-textColorThree text-3xl font-bold">
-                <SiSlashdot />
+          <div className= "flex items-center fixed  w-full md:w-[100%] md:static justify-between py-2 bg-bgColor shadow-xl md:px-4 pt-2">
+            <div className="flex cursor-pointer">
+              <span className="text- text-3xl font-bold text-yellow-500">
+                <SiLintcode />
               </span>
               <h2 className="font-JosefinSans leading-6 text-2xl font-bold text-textColorTwo">
                 Mahmudul
@@ -40,7 +42,7 @@ console.log(menuOpem);
             <div className="hidden md:block">
               <ul className="flex items-center gap-x-10">
                 <li className="font-JosefinSans text-md cursor-pointer">
-                  Home
+                     <a href="#home">Home</a>
                 </li>
 
                 <li className="font-JosefinSans text-md cursor-pointer">
@@ -48,18 +50,17 @@ console.log(menuOpem);
                 </li>
 
                 <li className="font-JosefinSans text-md cursor-pointer">
-                  Blog
+                  <a href="#blog">Blog</a>
                 </li>
                 <li className="font-JosefinSans text-md cursor-pointer">
-                  Contact
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
             <div className="hidden md:block">
               <button className="font-JosefinSans px-4 py-2 rounded-md font-bold bg-textColorTwo flex  gap-x-2 text-textColorOne">
-                Contact
                 <span className="font-bold text-xl text-textColorOne">
-                  <GoArrowUpRight />
+                  <ImBrightnessContrast />
                 </span>
               </button>
             </div>

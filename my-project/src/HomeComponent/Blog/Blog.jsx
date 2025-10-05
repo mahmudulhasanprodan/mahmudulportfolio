@@ -6,7 +6,7 @@ const Blog = () => {
  
   return (
     <>
-      <div className="bg-mainBg">
+      <div className="bg-mainBg" id="blog">
         <div className="container">
           <div className="bg-bgColor shadow-xl md:px-4 py-20">
             <div className="flex item center justify-center py-10 pb-10">
@@ -15,7 +15,7 @@ const Blog = () => {
             <div className="flex flex-wrap justify-between gap-y-6 cursor-pointer">
               {BlogProduct?.map((item) => (
                 <div key={item.id}>
-                  <div className="w-[450px] h-[350px] bg-textColorOne rounded-md shadow-md p-2">
+                  <div className="w-full md:w-[450px] h-[350px] bg-textColorOne rounded-md shadow-md p-2 px-4">
                     <div>
                       <picture>
                         <img

@@ -2,11 +2,12 @@ import AboutImage from "../../assets/menimage.jpg"
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
-import { IoIosContact } from "react-icons/io";
 import { FaSquarePhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaLanguage } from "react-icons/fa6";
+import { BiSolidContact } from "react-icons/bi";
+
 
 const About = () => {
   return (
@@ -55,7 +56,7 @@ const About = () => {
               <div className="flex flex-col gap-y-3">
                 <div className="flex items-center gap-x-2">
                   <span className="font-bold text-xl text-[#50589C]">
-                    <IoIosContact />
+                    <BiSolidContact />
                   </span>
                   <p className="font-JosefinSans text-sm font-thin">
                     Mahmudul Hasan

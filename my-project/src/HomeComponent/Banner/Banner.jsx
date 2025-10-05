@@ -4,6 +4,14 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { LuArrowRight } from "react-icons/lu";
 
 const Banner = () => {
+
+ const whatappNumber = "01316625624" // write whatapp number
+ const message = `Hi${"!"} How can I Help You ${"?"}` // Write the message
+ const encodedMessage = encodeURIComponent(message) // Message encoded
+
+ const whatappLink = `https://wa.me/${whatappNumber}?text=${encodedMessage}`
+
+
   return (
     <>
       <div className="bg-mainBg">
@@ -14,7 +22,7 @@ const Banner = () => {
                 <img
                   src={ProfileImage}
                   alt={ProfileImage}
-                  className="w-28 h-28 rounded-full border-4 border-textColorTwo"
+                  className="w-48 h-48 rounded-full border-4 border-textColorTwo shadow-xl"
                 />
               </div>
               <div className="flex items-center gap-x-1">
@@ -39,12 +47,14 @@ const Banner = () => {
                 </p>
               </div>
               <div className="flex items-center gap-x-4 pt-4">
-                <button className="px-2 md:px-8 py-2 bg-textColorTwo rounded-md text-textColorOne font-semibold flex items-center gap-x-2">
-                  Contact Whatsapp
-                  <span className="font-bold">
-                    <LuArrowRight />
-                  </span>
-                </button>
+                <a href={whatappLink} target="_blank" rel="noopener noreferrer">
+                  <button className="px-2 md:px-8 py-2 bg-textColorTwo rounded-md text-textColorOne font-semibold flex items-center gap-x-2">
+                    Contact Whatsapp
+                    <span className="font-bold">
+                      <LuArrowRight />
+                    </span>
+                  </button>
+                </a>
                 <button className="px-2 md:px-8 py-2 border-2 border-textColorThree rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree">
                   my resume
                   <span className="font-bold">
