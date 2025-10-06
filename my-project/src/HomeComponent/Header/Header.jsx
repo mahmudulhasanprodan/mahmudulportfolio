@@ -1,16 +1,17 @@
 
 // import { FaCodeBranch } from "react-icons/fa6";
 import { FaBarsStaggered } from "react-icons/fa6";
-import{ useState } from "react";
+import{ useState,useContext } from "react";
 import { SiLintcode } from "react-icons/si";
 import { ImBrightnessContrast } from "react-icons/im";
-
-
+import {ThemeProvider} from "../../Utils/ThemContex"
 
 const Header = () => {
 
 const[menuOpem,setmenuOpem] = useState(false);
+  const { themeUser, modeChanger } = useContext(ThemeProvider);
 
+  
 
 // HandleMenu Function is start Here
 const HandleMenu = () => {
@@ -22,7 +23,13 @@ const HandleMenu = () => {
     <>
       <div className="bg-mainBg">
         <div className="container m-auto">
-          <div className= "flex items-center fixed  w-full md:w-[100%] md:static justify-between py-2 bg-bgColor shadow-xl md:px-4 pt-2">
+          <div
+            className={`${
+              themeUser === "light"
+                ? "flex items-center fixed  w-full md:w-[100%] md:static justify-between py-2 bg-slate-900 shadow-xl md:px-4 pt-2"
+                : "flex items-center fixed  w-full md:w-[100%] md:static justify-between py-2 bg-bgColor shadow-xl md:px-4 pt-2"
+            }`}
+          >
             <div className="flex cursor-pointer">
               <span className="text- text-3xl font-bold text-yellow-500">
                 <SiLintcode />
@@ -41,25 +48,58 @@ const HandleMenu = () => {
             </div>
             <div className="hidden md:block">
               <ul className="flex items-center gap-x-10">
-                <li className="font-JosefinSans text-md cursor-pointer">
-                     <a href="#home">Home</a>
+                <li
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans text-md cursor-pointer text-textColorOne"
+                      : "font-JosefinSans text-md cursor-pointer"
+                  }`}
+                >
+                  <a href="#home">Home</a>
                 </li>
 
-                <li className="font-JosefinSans text-md cursor-pointer">
+                <li
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans text-md cursor-pointer text-textColorOne"
+                      : "font-JosefinSans text-md cursor-pointer"
+                  }`}
+                >
                   <a href="#about">About</a>
                 </li>
 
-                <li className="font-JosefinSans text-md cursor-pointer">
+                <li
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans text-md cursor-pointer text-textColorOne"
+                      : "font-JosefinSans text-md cursor-pointer"
+                  }`}
+                >
                   <a href="#blog">Blog</a>
                 </li>
-                <li className="font-JosefinSans text-md cursor-pointer">
+                <li
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans text-md cursor-pointer text-textColorOne"
+                      : "font-JosefinSans text-md cursor-pointer"
+                  }`}
+                >
                   <a href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
             <div className="hidden md:block">
-              <button className="font-JosefinSans px-4 py-2 rounded-md font-bold bg-textColorTwo flex  gap-x-2 text-textColorOne">
-                <span className="font-bold text-xl text-textColorOne">
+              <button
+                className="font-JosefinSans px-4 py-2 rounded-md font-bold bg-textColorTwo flex  gap-x-2 text-textColorOne"
+                onClick={modeChanger}
+              >
+                <span
+                  className={`${
+                    themeUser === "light"
+                      ? "font-bold text-xl text-yellow-300"
+                      : "font-bold text-xl text-textColorOne"
+                  }`}
+                >
                   <ImBrightnessContrast />
                 </span>
               </button>

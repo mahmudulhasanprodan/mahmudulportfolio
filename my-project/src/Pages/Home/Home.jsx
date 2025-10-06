@@ -5,17 +5,20 @@ import Skill from "../../HomeComponent//Skill/Skill"
 import About from "../../HomeComponent/About/About"
 import Blog from "../../HomeComponent/Blog/Blog"
 import Footer from "../../HomeComponent/Footer/Footer"
+import ThemContex from "../../Utils/ThemContex"
 
 const Home = () => {
 
   return (
     <>
-      <Header />
-      <Banner />
-      <Skill />
-      <About />
-      <Blog />
-      <Footer />
+      <ThemContex>
+        <Header />
+        <Banner />
+        <Skill />
+        <About />
+        <Blog />
+        <Footer />
+      </ThemContex>
     </>
   );
 }

@@ -11,20 +11,41 @@ import { SiAxios } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiAdobephotoshop } from "react-icons/si";
-
+import { useContext } from "react";
+import { ThemeProvider } from "../../Utils/ThemContex";
 
 const Skill = () => {
+const { themeUser } = useContext(ThemeProvider);
+
   return (
     <>
       <div className="bg-mainBg">
         <div className="container">
-          <div className="py-10 bg-bgColor shadow-xl md:px-4">
+          <div
+            className={`${
+              themeUser === "light"
+                ? "py-10 bg-slate-900 shadow-xl md:px-4"
+                : "py-10 bg-bgColor shadow-xl md:px-4"
+            }`}
+          >
             <div className="flex flex-col md:flex-row item-center gap-y-6 justify-between md:gap-y-3 px-4 md:px-0">
               <div className="w-full md:w-[400px] pt-10">
-                <h2 className="font-JosefinSans font-bold text-3xl">
+                <h2
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans font-bold text-3xl text-textColorTwo"
+                      : "font-JosefinSans font-bold text-3xl"
+                  }`}
+                >
                   My Expertise Area
                 </h2>
-                <p className="font-JosefinSans font-normal text-sm text-justify mt-3">
+                <p
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans font-normal text-sm text-justify mt-3 text-textColorOne"
+                      : "font-JosefinSans font-normal text-sm text-justify mt-3"
+                  }`}
+                >
                   I am a MERN Stack Developer with experience in building
                   full-stack web applications using MongoDB, Express.js,
                   React.js, and Node.js. Lorem ipsum dolor sit amet consectetur,
@@ -43,76 +64,98 @@ const Skill = () => {
                     <h2 className="font-JosefinSans font-bold text-sm">HTML</h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-1 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <IoLogoCss3 />
                     </span>
                     <h2 className="font-JosefinSans font-bold text-sm">CSS</h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <IoLogoNodejs />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">JavaScript</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      JavaScript
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <RiReactjsLine />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">Reactjs</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      Reactjs
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <TbBrandNextjs />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">Nextjs</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      Nextjs
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <SiTailwindcss />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">TwailwindCss</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      TwailwindCss
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 px-3 flex items-center rounded-md gap-x-2 ">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <IoLogoFirebase />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">Firebase</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      Firebase
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 px-3 flex items-center rounded-md gap-x-2">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <TbBrandRedux />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">Redux/Redux Toolkit</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      Redux/Redux Toolkit
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <SiAxios />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">Axios</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      Axios
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <FaNodeJs />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">Nodejs</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      Nodejs
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <SiExpress />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">Expressjs</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      Expressjs
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <SiMongodb />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">MongoDB</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      MongoDB
+                    </h2>
                   </div>
                   <div className="bg-bgColortwo py-1 flex items-center rounded-md gap-x-2 px-3">
-                    <span  className="text-textColorOne font-bold">
+                    <span className="text-textColorOne font-bold">
                       <SiAdobephotoshop />
                     </span>
-                    <h2 className="font-JosefinSans font-bold text-sm">Photoshop</h2>
+                    <h2 className="font-JosefinSans font-bold text-sm">
+                      Photoshop
+                    </h2>
                   </div>
                 </div>
               </div>

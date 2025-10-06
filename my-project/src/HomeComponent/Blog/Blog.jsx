@@ -1,4 +1,4 @@
-import { BlogProduct } from "../../../Utils/Utils";
+import { BlogProduct } from "../../Utils/Utils";
 
 
 const Blog = () => {

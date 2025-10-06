@@ -2,8 +2,11 @@ import ProfileImage from "../../assets/menimage.jpg"
 import { PiHandWaving } from "react-icons/pi";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { LuArrowRight } from "react-icons/lu";
+import { useContext } from "react";
+import { ThemeProvider } from "../../Utils/ThemContex";
 
 const Banner = () => {
+  const { themeUser } = useContext(ThemeProvider);
 
  const whatappNumber = "01316625624" // write whatapp number
  const message = `Hi${"!"} How can I Help You ${"?"}` // Write the message
@@ -16,7 +19,13 @@ const Banner = () => {
     <>
       <div className="bg-mainBg">
         <div className="container">
-          <div className="py-32 bg-bgColor shadow-xl">
+          <div
+            className={`${
+              themeUser === "light"
+                ? "py-32 bg-slate-900 shadow-xl"
+                : "py-32 bg-bgColor shadow-xl"
+            }`}
+          >
             <div className="flex flex-col items-center justify-center gap-y-3 -z-10">
               <div>
                 <img
@@ -26,7 +35,13 @@ const Banner = () => {
                 />
               </div>
               <div className="flex items-center gap-x-1">
-                <h2 className="font-JosefinSans text-sm md:text-xl">
+                <h2
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans text-sm md:text-xl text-textColorTwo"
+                      : "font-JosefinSans text-sm md:text-xl"
+                  }`}
+                >
                   Hi! I am Mahmudul Hasan
                 </h2>
                 <span className="text-yellow-700 text-3xl">
@@ -34,13 +49,25 @@ const Banner = () => {
                 </span>
               </div>
               <div className="mt-2 md:mt-4">
-                <h1 className="font-JosefinSans font-bold text-xl md:text-5xl text-center">
+                <h1
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans font-bold text-xl md:text-5xl text-center text-textColorOne"
+                      : "font-JosefinSans font-bold text-xl md:text-5xl text-center"
+                  }`}
+                >
                   Mern Stack Web Developer <br />
                   based in Bangladesh
                 </h1>
               </div>
               <div className="w-full md:w-[600px] px-4 md:px-0">
-                <p className="font-JosefinSans text-xs md:text-sm text-center">
+                <p
+                  className={`${
+                    themeUser === "light"
+                      ? "font-JosefinSans text-xs md:text-sm text-center text-textColorOne"
+                      : "font-JosefinSans text-xs md:text-sm text-center"
+                  }`}
+                >
                   I am a dedicated MERN stack developer with expertise in
                   building full-stack web applications using MongoDB,
                   Express.js, React, and Node.js.
@@ -55,7 +82,13 @@ const Banner = () => {
                     </span>
                   </button>
                 </a>
-                <button className="px-2 md:px-8 py-2 border-2 border-textColorThree rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree">
+                <button
+                  className={`${
+                    themeUser === "light"
+                      ? "px-2 md:px-8 py-2 border-2 border-textColorThree text-textColorOne rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
+                      : "px-2 md:px-8 py-2 border-2 border-textColorThree rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
+                  }`}
+                >
                   my resume
                   <span className="font-bold">
                     <MdOutlineFileDownload />

@@ -1,4 +1,4 @@
-import BlogOne from "../src/assets/blog1.jpg"
+import BlogOne from "../assets/blog1.jpg"
 
 
 export const BlogProduct = [
