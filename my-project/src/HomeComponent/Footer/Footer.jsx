@@ -7,11 +7,21 @@ import { ThemeProvider } from "../../Utils/ThemContex";
 const Footer = () => {
   const[contactModal,setcontactModal] = useState(false);
   const { themeUser } = useContext(ThemeProvider);
+
   // HandleContact function is start here
   const HandleContact = () => {
-        setcontactModal(!contactModal);
+      setcontactModal(!contactModal);
+      document.body.style.overflow = "hidden"
   };
 
+  // HandleCloseModal Function is here
+  const HandleCloseModal = () => {
+     setcontactModal(false);
+     document.body.style.overflow = "auto";
+  };
+
+  console.log(contactModal);
+  
   return (
     <>
       <div className="bg-mainBg">
@@ -96,6 +106,60 @@ const Footer = () => {
 
         {/* Contact madal is here */}
       </div>
+      {/* Contact Modal is Here */}
+      {contactModal && (
+        <div className="w-[100vw] h-[100vh] inset-0 fixed z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-gray-600 opacity-60"></div>
+          <div className="w-[500px] bg-white z-50 relative rounded-md py-10">
+            <div className="flex items-center justify-end pr-4">
+              <p className="absolute font-bold text-2xl cursor-pointer text-red-600 top-2" onClick={HandleCloseModal}>X</p>
+            </div>
+            <div>
+              <h2 className="text-3xl font-JosefinSans font-bold mb-4 text-center text-textColorTwo">
+                Contact Me
+              </h2>
+              <form className="flex flex-col gap-3 items-center justify-center">
+                <div className="flex flex-col gap-y-3">
+                  <label htmlFor="" className="font-JosefinSans font-semibold">
+                    Full Name*
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="border px-3 py-2 rounded-lg w-[400px]"
+                  />
+                </div>
+                <div className="flex flex-col gap-y-3">
+                  <label
+                    htmlFor="Email"
+                    className="font-JosefinSans font-semibold"
+                  >
+                    Email*
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="border px-3 py-2 rounded-lg w-[400px]"
+                  />
+                </div>
+                <div className="flex flex-col gap-y-3">
+                  <label htmlFor="" className="font-JosefinSans font-semibold">
+                    Message*
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    className="w-[400px] min-h-24 border px-3 py-2 rounded-lg"
+                  ></textarea>
+                </div>
+                <button className="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 w-72 pt-3">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
