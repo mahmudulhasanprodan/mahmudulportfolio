@@ -1,14 +1,22 @@
 import { BlogProduct } from "../../Utils/Utils";
-
+import { useContext } from "react";
+import { ThemeProvider } from "../../Utils/ThemContex";
 
 const Blog = () => {
  
- 
+  const { themeUser } = useContext(ThemeProvider);
+
   return (
     <>
       <div className="bg-mainBg" id="blog">
         <div className="container">
-          <div className="bg-bgColor shadow-xl md:px-4 py-20">
+          <div
+            className={`${
+              themeUser === "light"
+                ? "bg-slate-900 shadow-xl md:px-4 py-20"
+                : "bg-bgColor shadow-xl md:px-4 py-20"
+            }`}
+          >
             <div className="flex item center justify-center py-10 pb-10">
               <h2 className="font-JosefinSans font-bold text-3xl">Blogs</h2>
             </div>

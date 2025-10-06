@@ -2,10 +2,11 @@ import { useState } from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
-
+import { useContext } from "react";
+import { ThemeProvider } from "../../Utils/ThemContex";
 const Footer = () => {
   const[contactModal,setcontactModal] = useState(false);
-
+  const { themeUser } = useContext(ThemeProvider);
   // HandleContact function is start here
   const HandleContact = () => {
         setcontactModal(!contactModal);
@@ -15,10 +16,25 @@ const Footer = () => {
     <>
       <div className="bg-mainBg">
         <div className="container">
-          <div className="bg-bgColor shadow-xl pt-32">
-            <div className="bg-slate-900 w-full h-80 relative pt-24">
+          <div
+            className={`${
+              themeUser === "light"
+                ? "bg-slate-900 shadow-xl pt-32"
+                : "bg-bgColor shadow-xl pt-32"
+            }`}
+          >
+            <div
+              className={`${
+                themeUser === "light"
+                  ? "bg-slate-700 w-full h-80 relative pt-24"
+                  : "bg-slate-900 w-full h-80 relative pt-24"
+              }`}
+            >
               <div className="flex items-center justify-center">
-                <div className="w-full md:w-[750px] h-24 bg-textColorTwo absolute -top-12 flex items-center justify-between px-4 shadow-xl" id="contact">
+                <div
+                  className="w-full md:w-[750px] h-24 bg-textColorTwo absolute -top-12 flex items-center justify-between px-4 shadow-xl"
+                  id="contact"
+                >
                   <div>
                     <h2 className="font-JosefinSans text-sm md:text-md text-textColorOne font-bold">
                       Ready for a next projects?
@@ -42,7 +58,13 @@ const Footer = () => {
                   <h2 className="font-JosefinSans font-bold text-2xl text-textColorOne text-center">
                     Mahmudul Hasan
                   </h2>
-                  <h3 className="font-JosefinSans font-bold text-md text-textColorThree text-center">
+                  <h3
+                    className={`${
+                      themeUser === "light"
+                        ? "font-JosefinSans font-bold text-md text-black text-center"
+                        : "font-JosefinSans font-bold text-md text-textColorThree text-center"
+                    }`}
+                  >
                     Gazipur,Dhaka
                   </h3>
                 </div>
@@ -73,7 +95,6 @@ const Footer = () => {
         </div>
 
         {/* Contact madal is here */}
-       
       </div>
     </>
   );
