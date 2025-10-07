@@ -22,8 +22,8 @@ const Banner = () => {
           <div
             className={`${
               themeUser === "light"
-                ? "py-32 bg-slate-900 shadow-xl"
-                : "py-32 bg-bgColor shadow-xl"
+                ? "py-32 bg-bgColor shadow-xl"
+                : "py-32 bg-slate-900 shadow-xl"
             }`}
           >
             <div className="flex flex-col items-center justify-center gap-y-3 -z-10">
@@ -38,8 +38,8 @@ const Banner = () => {
                 <h2
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans text-sm md:text-xl text-textColorTwo"
-                      : "font-JosefinSans text-sm md:text-xl"
+                      ? "font-JosefinSans text-sm md:text-xl"
+                      : "font-JosefinSans text-sm md:text-xl text-textColorTwo"
                   }`}
                 >
                   Hi! I am Mahmudul Hasan
@@ -52,8 +52,8 @@ const Banner = () => {
                 <h1
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans font-bold text-xl md:text-5xl text-center text-textColorOne"
-                      : "font-JosefinSans font-bold text-xl md:text-5xl text-center"
+                      ? "font-JosefinSans font-bold text-xl md:text-5xl text-center"
+                      : "font-JosefinSans font-bold text-xl md:text-5xl text-center text-textColorOne"
                   }`}
                 >
                   Mern Stack Web Developer <br />
@@ -64,8 +64,8 @@ const Banner = () => {
                 <p
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans text-xs md:text-sm text-center text-textColorOne"
-                      : "font-JosefinSans text-xs md:text-sm text-center"
+                      ? "font-JosefinSans text-xs md:text-sm text-center"
+                      : "font-JosefinSans text-xs md:text-sm text-center text-textColorOne"
                   }`}
                 >
                   I am a dedicated MERN stack developer with expertise in
@@ -85,8 +85,8 @@ const Banner = () => {
                 <button
                   className={`${
                     themeUser === "light"
-                      ? "px-2 md:px-8 py-2 border-2 border-textColorThree text-textColorOne rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
-                      : "px-2 md:px-8 py-2 border-2 border-textColorThree rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
+                      ? "px-2 md:px-8 py-2 border-2 border-textColorThree rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
+                      : "px-2 md:px-8 py-2 border-2 border-textColorThree text-textColorOne rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
                   }`}
                 >
                   my resume

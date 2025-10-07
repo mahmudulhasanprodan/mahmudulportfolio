@@ -21,8 +21,8 @@ const About = () => {
           <div
             className={`${
               themeUser === "light"
-                ? "bg-slate-900 shadow-xl md:px-4"
-                : "bg-bgColor shadow-xl md:px-4"
+                ? "bg-bgColor shadow-xl md:px-4"
+                : "bg-slate-900 shadow-xl md:px-4"
             }`}
           >
             <div className="flex flex-col items-center justify-center gap-y-2 py-20">
@@ -34,8 +34,8 @@ const About = () => {
               <h2
                 className={`${
                   themeUser === "light"
-                    ? "font-JosefinSans font-bold text-2xl text-textColorOne"
-                    : "font-JosefinSans font-bold text-2xl"
+                    ? "font-JosefinSans font-bold text-2xl"
+                    : "font-JosefinSans font-bold text-2xl text-textColorOne"
                 }`}
               >
                 Mahmudul Hasan
@@ -43,8 +43,8 @@ const About = () => {
               <p
                 className={`${
                   themeUser === "light"
-                    ? "font-JosefinSans font-normal text-sm text-textColorTwo"
-                    : "font-JosefinSans font-normal text-sm"
+                    ? "font-JosefinSans font-normal text-sm"
+                    : "font-JosefinSans font-normal text-sm text-textColorTwo"
                 }`}
               >
                 I{"'"}m mern stack developer
@@ -53,8 +53,8 @@ const About = () => {
                 <span
                   className={`${
                     themeUser === "light"
-                      ? "font-bold text-3xl cursor-pointer hover:text-blue-700 text-textColorOne"
-                      : "font-bold text-3xl cursor-pointer hover:text-blue-700"
+                      ? "font-bold text-3xl cursor-pointer hover:text-blue-700"
+                      : "font-bold text-3xl cursor-pointer hover:text-blue-700 text-textColorOne"
                   }`}
                 >
                   <FaFacebookSquare />
@@ -62,8 +62,8 @@ const About = () => {
                 <span
                   className={`${
                     themeUser === "light"
-                      ? "font-bold text-3xl cursor-pointer hover:text-blue-700 text-textColorOne"
-                      : "font-bold text-3xl cursor-pointer hover:text-blue-700"
+                      ? "font-bold text-3xl cursor-pointer hover:text-blue-700"
+                      : "font-bold text-3xl cursor-pointer hover:text-blue-700 text-textColorOne"
                   }`}
                 >
                   <FaLinkedin />
@@ -71,8 +71,8 @@ const About = () => {
                 <span
                   className={`${
                     themeUser === "light"
-                      ? "font-bold text-3xl cursor-pointer hover:text-red-700 text-textColorOne"
-                      : "font-bold text-3xl cursor-pointer hover:text-red-700"
+                      ? "font-bold text-3xl cursor-pointer hover:text-red-700"
+                      : "font-bold text-3xl cursor-pointer hover:text-red-700 text-textColorOne"
                   }`}
                 >
                   <FaSquareGithub />
@@ -85,8 +85,8 @@ const About = () => {
                 <h2
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans font-bold text-xl pb-3 text-textColorTwo"
-                      : "font-JosefinSans font-bold text-xl pb-3"
+                      ? "font-JosefinSans font-bold text-xl pb-3"
+                      : "font-JosefinSans font-bold text-xl pb-3 text-textColorTwo"
                   }`}
                 >
                   Personal Details
@@ -94,8 +94,8 @@ const About = () => {
                 <p
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans text-sm text-justify text-textColorOne"
-                      : "font-JosefinSans text-sm text-justify"
+                      ? "font-JosefinSans text-sm text-justify"
+                      : "font-JosefinSans text-sm text-justify text-textColorOne"
                   }`}
                 >
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -113,8 +113,8 @@ const About = () => {
                   <p
                     className={`${
                       themeUser === "light"
-                        ? "font-JosefinSans text-sm font-thin text-textColorOne"
-                        : "font-JosefinSans text-sm font-thin"
+                        ? "font-JosefinSans text-sm font-thin"
+                        : "font-JosefinSans text-sm font-thin text-textColorOne"
                     }`}
                   >
                     Mahmudul Hasan
@@ -127,8 +127,8 @@ const About = () => {
                   <p
                     className={`${
                       themeUser === "light"
-                        ? "font-JosefinSans text-sm font-thin text-textColorOne"
-                        : "font-JosefinSans text-sm font-thin"
+                        ? "font-JosefinSans text-sm font-thin"
+                        : "font-JosefinSans text-sm font-thin text-textColorOne"
                     }`}
                   >
                     +8801859087651
@@ -141,8 +141,8 @@ const About = () => {
                   <p
                     className={`${
                       themeUser === "light"
-                        ? "font-JosefinSans text-sm font-thin text-textColorOne"
-                        : "font-JosefinSans text-sm font-thin"
+                        ? "font-JosefinSans text-sm font-thin"
+                        : "font-JosefinSans text-sm font-thin text-textColorOne"
                     }`}
                   >
                     merndev.mahmudulhasan@gmail.com
@@ -155,8 +155,8 @@ const About = () => {
                   <p
                     className={`${
                       themeUser === "light"
-                        ? "font-JosefinSans text-sm font-thin text-textColorOne"
-                        : "font-JosefinSans text-sm font-thin"
+                        ? "font-JosefinSans text-sm font-thin"
+                        : "font-JosefinSans text-sm font-thin text-textColorOne"
                     }`}
                   >
                     Mohona Bhabanipur,Gazipur Sadar,Gazipur
@@ -169,8 +169,8 @@ const About = () => {
                   <p
                     className={`${
                       themeUser === "light"
-                        ? "font-JosefinSans text-sm font-thin text-textColorOne"
-                        : "font-JosefinSans text-sm font-thin"
+                        ? "font-JosefinSans text-sm font-thin"
+                        : "font-JosefinSans text-sm font-thin text-textColorOne"
                     }`}
                   >
                     Bangla,English,Hindi

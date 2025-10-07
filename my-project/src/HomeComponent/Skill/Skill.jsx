@@ -24,8 +24,8 @@ const { themeUser } = useContext(ThemeProvider);
           <div
             className={`${
               themeUser === "light"
-                ? "py-10 bg-slate-900 shadow-xl md:px-4"
-                : "py-10 bg-bgColor shadow-xl md:px-4"
+                ? "py-10 bg-bgColor shadow-xl md:px-4"
+                : "py-10  bg-slate-900 shadow-xl md:px-4"
             }`}
           >
             <div className="flex flex-col md:flex-row item-center gap-y-6 justify-between md:gap-y-3 px-4 md:px-0">
@@ -33,8 +33,8 @@ const { themeUser } = useContext(ThemeProvider);
                 <h2
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans font-bold text-3xl text-textColorTwo"
-                      : "font-JosefinSans font-bold text-3xl"
+                      ? "font-JosefinSans font-bold text-3xl"
+                      : "font-JosefinSans font-bold text-3xl text-textColorTwo"
                   }`}
                 >
                   My Expertise Area
@@ -42,8 +42,8 @@ const { themeUser } = useContext(ThemeProvider);
                 <p
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans font-normal text-sm text-justify mt-3 text-textColorOne"
-                      : "font-JosefinSans font-normal text-sm text-justify mt-3"
+                      ? "font-JosefinSans font-normal text-sm text-justify mt-3"
+                      : "font-JosefinSans font-normal text-sm text-justify mt-3 text-textColorOne"
                   }`}
                 >
                   I am a MERN Stack Developer with experience in building
@@ -56,7 +56,7 @@ const { themeUser } = useContext(ThemeProvider);
               </div>
               {/* skill part is here */}
               <div>
-                <div className="w-full md:w-[450px] bg-slate-900 shadow-md rounded-md p-6 flex items-center gap-x-4 gap-y-4 flex-wrap py-10 cursor-pointer">
+                <div className="w-full md:w-[450px] bg-slate-900 shadow-md rounded-md md:p-6 flex items-center gap-x-4 gap-y-4 flex-wrap py-10 cursor-pointer">
                   <div className="bg-bgColortwo py-1 w-24 flex items-center rounded-md gap-x-1 px-1">
                     <span className="text-textColorOne font-bold">
                       <IoLogoHtml5 />

@@ -13,12 +13,20 @@ const Blog = () => {
           <div
             className={`${
               themeUser === "light"
-                ? "bg-slate-900 shadow-xl md:px-4 py-20"
-                : "bg-bgColor shadow-xl md:px-4 py-20"
+                ? "bg-bgColor shadow-xl md:px-4 py-20"
+                : "bg-slate-900 shadow-xl md:px-4 py-20"
             }`}
           >
             <div className="flex item center justify-center py-10 pb-10">
-              <h2 className="font-JosefinSans font-bold text-3xl">Blogs</h2>
+              <h2
+                className={`${
+                  themeUser === "light"
+                    ? "font-JosefinSans font-bold text-3xl"
+                    : "font-JosefinSans font-bold text-3xl text-textColorTwo"
+                }`}
+              >
+                Blogs
+              </h2>
             </div>
             <div className="flex flex-wrap justify-between gap-y-6 cursor-pointer">
               {BlogProduct?.map((item) => (

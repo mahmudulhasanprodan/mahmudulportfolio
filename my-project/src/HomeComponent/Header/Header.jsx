@@ -26,8 +26,8 @@ const HandleMenu = () => {
           <div
             className={`${
               themeUser === "light"
-                ? "flex items-center fixed  w-full md:w-[100%] md:static justify-between py-2 bg-slate-900 shadow-xl md:px-4 pt-2"
-                : "flex items-center fixed  w-full md:w-[100%] md:static justify-between py-2 bg-bgColor shadow-xl md:px-4 pt-2"
+                ? "flex items-center fixed  w-full md:w-[100%] md:static justify-between py-2 bg-bgColor  shadow-xl px-2 md:px-4 pt-2"
+                : "flex items-center fixed  w-full md:w-[100%] md:static justify-between py-2 bg-slate-900 shadow-xl px-2 md:px-4 pt-2"
             }`}
           >
             <div className="flex cursor-pointer">
@@ -40,7 +40,7 @@ const HandleMenu = () => {
             </div>
             <div className="md:hidden">
               <span
-                className="font-bold text-xl cursor-pointer"
+                className={`${themeUser === "light" ? "font-bold text-xl cursor-pointer" : "font-bold text-xl cursor-pointer text-textColorOne"}`}
                 onClick={HandleMenu}
               >
                 <FaBarsStaggered />
@@ -51,8 +51,8 @@ const HandleMenu = () => {
                 <li
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans text-md cursor-pointer text-textColorOne"
-                      : "font-JosefinSans text-md cursor-pointer"
+                      ? "font-JosefinSans text-md cursor-pointer"
+                      : "font-JosefinSans text-md cursor-pointer text-textColorOne"
                   }`}
                 >
                   <a href="#home">Home</a>
@@ -61,8 +61,8 @@ const HandleMenu = () => {
                 <li
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans text-md cursor-pointer text-textColorOne"
-                      : "font-JosefinSans text-md cursor-pointer"
+                      ? "font-JosefinSans text-md cursor-pointer"
+                      : "font-JosefinSans text-md cursor-pointer text-textColorOne"
                   }`}
                 >
                   <a href="#about">About</a>
@@ -71,8 +71,8 @@ const HandleMenu = () => {
                 <li
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans text-md cursor-pointer text-textColorOne"
-                      : "font-JosefinSans text-md cursor-pointer"
+                      ? "font-JosefinSans text-md cursor-pointer"
+                      : "font-JosefinSans text-md cursor-pointer text-textColorOne"
                   }`}
                 >
                   <a href="#blog">Blog</a>
@@ -80,24 +80,24 @@ const HandleMenu = () => {
                 <li
                   className={`${
                     themeUser === "light"
-                      ? "font-JosefinSans text-md cursor-pointer text-textColorOne"
-                      : "font-JosefinSans text-md cursor-pointer"
+                      ? "font-JosefinSans text-md cursor-pointer"
+                      : "font-JosefinSans text-md cursor-pointer text-textColorOne"
                   }`}
                 >
                   <a href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
-            <div className="hidden md:block">
+            <div className="absolute md:static left-64">
               <button
-                className="font-JosefinSans px-4 py-2 rounded-md font-bold bg-textColorTwo flex  gap-x-2 text-textColorOne"
+                className="font-JosefinSans px-4 py-2 rounded-md font-bold md:bg-textColorTwo flex  gap-x-2 text-textColorOne"
                 onClick={modeChanger}
               >
                 <span
                   className={`${
                     themeUser === "light"
-                      ? "font-bold text-xl text-yellow-300"
-                      : "font-bold text-xl text-textColorOne"
+                      ? "font-bold text-xl text-black md:text-textColorOne"
+                      : "font-bold text-xl text-yellow-300"
                   }`}
                 >
                   <ImBrightnessContrast />
