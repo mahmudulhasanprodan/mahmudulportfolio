@@ -46,17 +46,14 @@ const { themeUser } = useContext(ThemeProvider);
                       : "font-JosefinSans font-normal text-sm text-justify mt-3 text-textColorOne"
                   }`}
                 >
-                  I am a MERN Stack Developer with experience in building
+                  I am a Jr. MERN Stack Developer with experience in building
                   full-stack web applications using MongoDB, Express.js,
-                  React.js, and Node.js. Lorem ipsum dolor sit amet consectetur,
-                  adipisicing elit. Ut harum veniam distinctio dignissimos nulla
-                  quibusdam. Sed veritatis aliquid dignissimos eius nobis
-                  consequuntur, quam explicabo quia?
+                  React.js, and Node.js.
                 </p>
               </div>
               {/* skill part is here */}
               <div>
-                <div className="w-full md:w-[450px] bg-slate-900 shadow-md rounded-md md:p-6 flex items-center gap-x-4 gap-y-4 flex-wrap py-10 cursor-pointer">
+                <div className="w-full px-4  md:w-[450px] bg-slate-900 shadow-md rounded-md md:p-6 flex items-center gap-x-4 gap-y-4 flex-wrap py-10 cursor-pointer">
                   <div className="bg-bgColortwo py-1 w-24 flex items-center rounded-md gap-x-1 px-1">
                     <span className="text-textColorOne font-bold">
                       <IoLogoHtml5 />

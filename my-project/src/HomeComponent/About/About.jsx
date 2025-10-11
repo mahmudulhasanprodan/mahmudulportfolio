@@ -57,7 +57,13 @@ const About = () => {
                       : "font-bold text-3xl cursor-pointer hover:text-blue-700 text-textColorOne"
                   }`}
                 >
-                  <FaFacebookSquare />
+                  <a
+                    href="https://www.facebook.com/share/1ZLABKt7ru/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFacebookSquare />
+                  </a>
                 </span>
                 <span
                   className={`${
@@ -66,7 +72,13 @@ const About = () => {
                       : "font-bold text-3xl cursor-pointer hover:text-blue-700 text-textColorOne"
                   }`}
                 >
-                  <FaLinkedin />
+                  <a
+                    href="http://www.linkedin.com/in/mahmudul-hasan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedin />
+                  </a>
                 </span>
                 <span
                   className={`${
@@ -75,7 +87,14 @@ const About = () => {
                       : "font-bold text-3xl cursor-pointer hover:text-red-700 text-textColorOne"
                   }`}
                 >
-                  <FaSquareGithub />
+                  <a
+                    href="https://github.com/mahmudulhasanprodan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {" "}
+                    <FaSquareGithub />
+                  </a>
                 </span>
               </div>
             </div>
@@ -98,11 +117,16 @@ const About = () => {
                       : "font-JosefinSans text-sm text-justify text-textColorOne"
                   }`}
                 >
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Ullam facilis est tempore vero neque delectus doloremque,
-                  architecto natus id vel atque aspernatur ex. Eveniet error
-                  alias fugiat nam provident, quam fuga voluptas obcaecati.
-                  Aspernatur, nesciunt.
+                  I’m a passionate Jr. MERN Stack Developer with a strong focus
+                  on building responsive, scalable, and user-friendly web
+                  applications. I specialize in MongoDB, Express.js, React.js,
+                  and Node.js, and enjoy turning complex problems into elegant,
+                  efficient solutions.I have experience in front-end development
+                  (React, Tailwind, Redux, Nextjs) and back-end architecture
+                  (REST APIs, JWT authentication, MongoDB Atlas).Always learning
+                  new technologies and improving my skills, I’m motivated by
+                  clean code, performance optimization, and creating products
+                  that deliver real value to users.
                 </p>
               </div>
               <div className="flex flex-col gap-y-3">

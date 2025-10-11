@@ -18,6 +18,10 @@ const HandleMenu = () => {
     setmenuOpem(!menuOpem)
 };
 
+//HandleCloseMenu Funcito is here
+const HandleCloseMenu = () => {
+    setmenuOpem(false);
+};
 
   return (
     <>
@@ -40,7 +44,11 @@ const HandleMenu = () => {
             </div>
             <div className="md:hidden">
               <span
-                className={`${themeUser === "light" ? "font-bold text-xl cursor-pointer" : "font-bold text-xl cursor-pointer text-textColorOne"}`}
+                className={`${
+                  themeUser === "light"
+                    ? "font-bold text-xl cursor-pointer"
+                    : "font-bold text-xl cursor-pointer text-textColorOne"
+                }`}
                 onClick={HandleMenu}
               >
                 <FaBarsStaggered />
@@ -112,24 +120,36 @@ const HandleMenu = () => {
               <div>
                 <span
                   className="font-bold text-xl cursor-pointer flex z-50 px-4 text-textColorOne justify-end pt-3"
-                  onClick={HandleMenu}
+                  onClick={HandleCloseMenu}
                 >
                   X
                 </span>
               </div>
               <div className="pt-10">
                 <ul className="flex flex-col items-center  gap-y-6 -z-20">
-                  <li className="font-JosefinSans text-md cursor-pointer text-textColorOne">
-                    Home
+                  <li
+                    className="font-JosefinSans text-md cursor-pointer text-textColorOne"
+                    onClick={HandleCloseMenu}
+                  >
+                    <a href="#home">Home</a>
                   </li>
-                  <li className="font-JosefinSans text-md cursor-pointer">
-                    About
+                  <li
+                    className="font-JosefinSans text-md cursor-pointer text-textColorOne"
+                    onClick={HandleCloseMenu}
+                  >
+                    <a href="#about">About</a>
                   </li>
-                  <li className="font-JosefinSans text-md cursor-pointer">
-                    Blog
+                  <li
+                    className="font-JosefinSans text-md cursor-pointer text-textColorOne"
+                    onClick={HandleCloseMenu}
+                  >
+                    <a href="#blog">Blog</a>
                   </li>
-                  <li className="font-JosefinSans text-md cursor-pointer">
-                    Contact
+                  <li
+                    className="font-JosefinSans text-md cursor-pointer text-textColorOne"
+                    onClick={HandleCloseMenu}
+                  >
+                    <a href="#contact">Contact</a>
                   </li>
                 </ul>
               </div>

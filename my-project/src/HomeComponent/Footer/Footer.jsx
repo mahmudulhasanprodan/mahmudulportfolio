@@ -84,13 +84,32 @@ const Footer = () => {
                   </h2>
                   <div className="flex items-center gap-x-3">
                     <span className="font-bold text-xl text-textColorOne cursor-pointer">
-                      <FaFacebookSquare />
+                      <a
+                        href="https://www.facebook.com/share/1ZLABKt7ru/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {" "}
+                        <FaFacebookSquare />
+                      </a>
                     </span>
                     <span className="font-bold text-xl text-textColorOne cursor-pointer">
-                      <FaLinkedin />
+                      <a
+                        href="http://www.linkedin.com/in/mahmudul-hasan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLinkedin />
+                      </a>
                     </span>
                     <span className="font-bold text-xl text-textColorOne cursor-pointer">
-                      <FaSquareGithub />
+                      <a
+                        href="https://github.com/mahmudulhasanprodan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaSquareGithub />
+                      </a>
                     </span>
                   </div>
                 </div>
@@ -110,9 +129,14 @@ const Footer = () => {
       {contactModal && (
         <div className="w-full h-full md:w-[100vw] md:h-[100vh] inset-0 fixed z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-gray-600 opacity-60"></div>
-          <div className="w-full md:w-[500px] bg-white z-50 relative rounded-md py-10">
+          <div className="w-full md:w-[500px] bg-white z-50 relative shadow-lg rounded-md py-10">
             <div className="flex items-center justify-end pr-4">
-              <p className="absolute font-bold text-2xl cursor-pointer text-red-600 top-2" onClick={HandleCloseModal}>X</p>
+              <p
+                className="absolute font-bold text-2xl cursor-pointer text-red-600 top-2"
+                onClick={HandleCloseModal}
+              >
+                X
+              </p>
             </div>
             <div>
               <h2 className="text-3xl font-JosefinSans font-bold mb-4 text-center text-textColorTwo">

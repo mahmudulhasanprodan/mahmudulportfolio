@@ -82,18 +82,20 @@ const Banner = () => {
                     </span>
                   </button>
                 </a>
-                <button
-                  className={`${
-                    themeUser === "light"
-                      ? "px-2 md:px-8 py-2 border-2 border-textColorThree rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
-                      : "px-2 md:px-8 py-2 border-2 border-textColorThree text-textColorOne rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
-                  }`}
-                >
-                  my resume
-                  <span className="font-bold">
-                    <MdOutlineFileDownload />
-                  </span>
-                </button>
+                <a href="./../../assets/MahmudulHasan.pdf" download={"MahmudulHasan.pdf"}>
+                  <button
+                    className={`${
+                      themeUser === "light"
+                        ? "px-2 md:px-8 py-2 border-2 border-textColorThree rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
+                        : "px-2 md:px-8 py-2 border-2 border-textColorThree text-textColorOne rounded-md font-semibold flex items-center gap-x-2 hover:bg-textColorThree"
+                    }`}
+                  >
+                    my resume
+                    <span className="font-bold">
+                      <MdOutlineFileDownload />
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
