@@ -116,7 +116,7 @@ const HandleCloseMenu = () => {
 
           {/* Mobile menu bar is here */}
           {menuOpem && (
-            <div className="md:hidden top-0 fixed w-full h-[100vh] bg-textColorThree right-0 transition-all duration-700">
+            <div className="md:hidden top-0 fixed w-full h-[100vh] bg-textColorThree z-50  transition-all duration-500">
               <div>
                 <span
                   className="font-bold text-xl cursor-pointer flex z-50 px-4 text-textColorOne justify-end pt-3"
