@@ -4,9 +4,19 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import { useContext } from "react";
 import { ThemeProvider } from "../../Utils/ThemContex";
+
+
 const Footer = () => {
+
+
+
   const[contactModal,setcontactModal] = useState(false);
   const { themeUser } = useContext(ThemeProvider);
+  const [contactData,setcontactData] = useState({
+       name : "",
+       email : "",
+       message: "",
+  })
 
   // HandleContact function is start here
   const HandleContact = () => {
@@ -20,7 +30,33 @@ const Footer = () => {
      document.body.style.overflow = "auto";
   };
 
-  console.log(contactModal);
+// Handlechange Function is start here
+const Handlechange = (e) => {
+   setcontactData({
+    ...contactData,
+    [e.target.id] : e.target.value,
+   
+   })
+};
+
+
+// Handlesubmit Function is here
+   const Handlesubmit = async (e) => {
+    e.preventDefault();
+      try {
+         const data = await fetch("http://localhost:5000/usersms",contactData, {
+           method: "POST",
+           headers: {
+             "Content-Type": "application/json",
+           },
+          //  body: JSON.stringify(contactData),
+        });
+        console.log(data)
+      } catch (error) {
+        console.log(error)
+      }
+       
+   }
   
   return (
     <>
@@ -142,7 +178,7 @@ const Footer = () => {
               <h2 className="text-3xl font-JosefinSans font-bold mb-4 text-center text-textColorTwo">
                 Contact Me
               </h2>
-              <form className="flex flex-col gap-3 items-center justify-center">
+              <form className="flex flex-col gap-3 items-center justify-center" onSubmit={Handlesubmit}>
                 <div className="flex flex-col gap-y-3">
                   <label htmlFor="" className="font-JosefinSans font-semibold">
                     Full Name*
@@ -151,6 +187,8 @@ const Footer = () => {
                     type="text"
                     placeholder="Full Name"
                     className="border px-3 py-2 rounded-lg w-[300px] md:w-[400px]"
+                    id="name"
+                    onChange={Handlechange}
                   />
                 </div>
                 <div className="flex flex-col gap-y-3">
@@ -163,7 +201,9 @@ const Footer = () => {
                   <input
                     type="email"
                     placeholder="Email"
+                    id="email"
                     className="border px-3 py-2 rounded-lg w-[300px] md:w-[400px]"
+                     onChange={Handlechange}
                   />
                 </div>
                 <div className="flex flex-col gap-y-3">
@@ -174,9 +214,10 @@ const Footer = () => {
                     name="message"
                     id="message"
                     className="w-[300px] md:w-[400px] min-h-24 border px-3 py-2 rounded-lg"
+                    onChange={Handlechange}
                   ></textarea>
                 </div>
-                <button className="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 w-72 pt-3">
+                <button className="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 w-72 pt-3" type="submit">
                   Send Message
                 </button>
               </form>

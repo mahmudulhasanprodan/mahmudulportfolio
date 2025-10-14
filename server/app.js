@@ -2,13 +2,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-
+const cors = require('cors')
 // Internal Imports
 const {notFoundHandler,errorHandler} = require("./ErrorHandler/errorHandler")
 const userRouter = require('./Route/userRouter')
 
 const app = express();
 dotenv.config();
+
+// Cors
+app.use(cors({
+ origin : "http://localhost:5173",
+ methods : "GET,PUT,POST,DELETE",
+}))
 
 // Database Connection 
 mongoose.connect(process.env.CONNECTION_STRING)
