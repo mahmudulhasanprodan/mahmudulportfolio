@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 
 // Internal Imports
 const {notFoundHandler,errorHandler} = require("./ErrorHandler/errorHandler")
-
+const userRouter = require('./Route/userRouter')
 
 const app = express();
 dotenv.config();
@@ -21,9 +21,7 @@ app.use(express.urlencoded({extended : true}))
 
 
 // Route handler
-app.get("/",(req,res) => {
-     res.send("Hello Programmers!")
-})
+app.use("/usersms", userRouter);
 
 
 // not found handler
